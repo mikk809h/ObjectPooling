@@ -2,7 +2,7 @@
 Object Pooling Class for Unity
 
 #### Usage:
-```
+```cs
 ObjectPool(string name, int 10, GameObject object, Transform parent)
 
 // Construct the pool
