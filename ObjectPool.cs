@@ -4,7 +4,6 @@ using UnityEngine;
 [System.Serializable]
 public class ObjectPool
 {
-    #region Attributes
     /// <summary>
     ///     Name of the object pool and the objects that are instantiated
     /// </summary>
@@ -29,7 +28,6 @@ public class ObjectPool
     ///     Private list of pooled objects
     /// </summary>
     private List<GameObject> pool = new List<GameObject>();
-    #endregion
 
     /// <summary>
     ///     Constructor of the Object Pool
