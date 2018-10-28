@@ -5,37 +5,37 @@ using UnityEngine;
 public class ObjectPool
 {
     /// <summary>
-    ///     Name of the object pool and the objects that are instantiated
+    ///     Name of the object pool and the objects that are instantiated.
     /// </summary>
     public string name;
 
     /// <summary>
-    ///     How many objects to instantiate when starting
+    ///     How many objects to instantiate when starting.
     /// </summary>
     public int size;
 
     /// <summary>
-    ///     The object to pool
+    ///     The object to pool.
     /// </summary>
     public GameObject prefab;
 
     /// <summary>
-    ///     The transform of the gameobject which will be the parent for every object in the pool
+    ///     The transform of the gameobject which will be the parent for every object in the pool.
     /// </summary>
     public Transform parent;
 
     /// <summary>
-    ///     Private list of pooled objects
+    ///     Private list of pooled objects.
     /// </summary>
     private List<GameObject> pool = new List<GameObject>();
 
     /// <summary>
-    ///     Constructor of the Object Pool
+    ///     Constructor of the Object Pool.
     /// </summary>
-    /// <param name="name">Name of the object pool</param>
-    /// <param name="size">Size of the pool</param>
-    /// <param name="prefab">The object to pool</param>
-    /// <param name="parent">The transform of the gameobject which will be the parent for every object in the pool</param>
+    /// <param name="name">Name of the object pool.</param>
+    /// <param name="size">Size of the pool.</param>
+    /// <param name="prefab">The object to pool.</param>
+    /// <param name="parent">The transform of the gameobject which will be the parent for every object in the pool.</param>
     public ObjectPool(string name, int size, GameObject prefab, Transform parent)
     {
         if (System.String.IsNullOrEmpty(name))
@@ -69,11 +69,11 @@ public class ObjectPool
     }
 
     /// <summary>
-    ///     Gets an object from the pool, activates it and sets the position and rotation
+    ///     Gets an object from the pool, activates it and sets the position and rotation.
     /// </summary>
-    /// <param name="position">Position to place returned object</param>
-    /// <param name="rotation">Rotation to set the object to</param>
-    /// <returns>An object from the pool</returns>
+    /// <param name="position">Position to place returned object.</param>
+    /// <param name="rotation">Rotation to set the object to.</param>
+    /// <returns>An object from the pool.</returns>
     public GameObject GetObjectFromPool(Vector3 position, Quaternion rotation)
     {
         // If no remaining objects are ready to be taken from the pool,
@@ -109,9 +109,9 @@ public class ObjectPool
     }
 
     /// <summary>
-    ///     Disables the object and puts it back into the pool
+    ///     Disables the object and puts it back into the pool.
     /// </summary>
-    /// <param name="gameObject">A object from the pool</param>
+    /// <param name="gameObject">A object from the pool.</param>
     public void ReturnObjectToPool(GameObject gameObject)
     {
         // Resets the position and disables the object
